@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Customer(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True)
     country = models.CharField(max_length=30)
-    phone = models.IntegerField(max_length=11)
+    phone = models.IntegerField()
     # class Meta:
     #     model = User
     #     fields = ('first_name', 'country','phone')
